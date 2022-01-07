@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#FFFFFF"
+	android:layout_margin="2dp"
+    android:orientation="vertical">
+
+
+
+    <TextView
+		        android:id="@+id/textView22"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_horizontal"
+		        android:layout_marginTop="20dp"
+		        android:gravity="center"
+		        android:textColor="#66000000" 
+		        android:text="User Manual"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textStyle="bold" />
+
+	<ScrollView
+		android:id="@+id/scrolli"
+		android:layout_width="match_parent"
+		android:layout_gravity="center_horizontal|top"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:layout_marginTop="20dp"
+			android:textColor="#000000"
+			android:text="About App"
+			/>
+
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:contentDescription="@string/enda"
+			android:layout_gravity="center"
+			android:adjustViewBounds="true"
+			android:scaleType="fitXY"
+			android:src="@drawable/frost6" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:layout_marginTop="20dp"
+			android:textColor="#000000"
+			android:text="Start Up Section"
+			 />
+ 
+        
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:contentDescription="@string/enda"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/frost1" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:layout_marginTop="20dp"
+			android:textColor="#000000"
+			android:text="Main Page Section"
+			/>
+
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:contentDescription="@string/enda"
+			android:layout_gravity="center"
+			android:adjustViewBounds="true"
+			android:scaleType="fitXY"
+			android:src="@drawable/frost2" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:layout_marginTop="20dp"
+			android:textColor="#000000"
+			android:text="Add frost or non-frost location"
+			/>
+
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:contentDescription="@string/enda"
+			android:layout_gravity="center"
+			android:adjustViewBounds="true"
+			android:scaleType="fitXY"
+			android:src="@drawable/frost3" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:layout_marginTop="20dp"
+			android:textColor="#000000"
+			android:text="Report frost for a frost location"
+			/>
+
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:contentDescription="@string/enda"
+			android:layout_gravity="center"
+			android:adjustViewBounds="true"
+			android:scaleType="fitXY"
+			android:src="@drawable/frost4" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:layout_marginTop="20dp"
+			android:textColor="#000000"
+			android:text="Report No frost for a frost location"
+			/>
+
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:contentDescription="@string/enda"
+			android:layout_gravity="center"
+			android:adjustViewBounds="true"
+			android:scaleType="fitXY"
+			android:src="@drawable/frost5" />
+
+		</LinearLayout>
+	</ScrollView>
+
+    </LinearLayout>

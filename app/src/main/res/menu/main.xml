@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	tools:context="com.servir.rangelandscollector.MainActivity">
+
+    <item  android:id="@+id/itop1"
+	    android:orderInCategory="1"
+        app:showAsAction="never"
+        android:title="@string/reggo"
+		 />
+
+	<item  android:id="@+id/itop2"
+		android:orderInCategory="1"
+		app:showAsAction="never"
+		android:title="Locate Me"/>
+
+
+	<item  android:id="@+id/itop3"
+		android:orderInCategory="3"
+		app:showAsAction="never"
+		android:title="About Us"/>
+
+	<item  android:id="@+id/itop4"
+		android:orderInCategory="4"
+		app:showAsAction="never"
+		android:title="User Manual"/>
+
+	<item  android:id="@+id/itop5"
+		android:orderInCategory="4"
+		app:showAsAction="never"
+		android:title="Sign Out"/>
+
+</menu>

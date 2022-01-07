@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Frost Mapper</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="support">About App</string>
+
+    <string name="err_msg_name">Please enter your full name</string>
+    <string name="err_msg_email">Please enter a valid email address</string>
+    <string name="err_msg_phone">Please enter a valid phone number</string>
+    <string name="err_msg_org" translatable="false">Please enter your organisation name</string>
+    <string name="err_msg_role" translatable="false">Please enter your role/position/department</string>
+    <string name="err_msg_password">Please enter a password</string>
+    <string name="err_msg_password2">Please make sure the passowrd match</string>
+
+    <string name="signin_details_wrong">Incorrect detail used. Contact the administrator for help.</string>
+    <string name="signin_password_wrong">Please use the right password.</string>
+    <string name="signin_userinactive">Please contact the administrator for approval.</string>
+    <string name="signin_usersuspended">Please contact the administrator. Account is suspended.</string>
+    <string name="signin_internet_off">Kindly turn on internet to receive updates.</string>
+    <string name="signin_fill_all">Please fill in the login detail.</string>
+    <string name="signin_setup_ctd">Please wait as setup is done.</string>
+    <string name="signin_dev_error">E434: Please contact the administrator. </string>
+    <string name="signin_message">Signing in…</string>
+    <string name="signin_locations">Loading Data…</string>
+    <string name="signin_setup">Fetching records…</string>
+
+    <string name="signup_message">Registering…</string>
+
+    <string name="s8a">Specify</string>
+
+    <string name="bfoop">Take Picture</string>
+
+    <string name="stst">Frost Mapper is a subset of JiMapp System. JiMapp is a customizable spatial data collection android app that facilitates the simple collection of georeferenced information. \n It comes along with a fully equipped web display application. \n For more information about this system please call 0717534281.</string>
+
+
+    <string name="but1">Report Frost</string>
+    <string name="but2">Add/Edit Location</string>
+    <string name="but3">Send Data</string>
+    <string name="locstat">Scanning Location :</string>
+
+    <string name="reggo">Register</string>
+    <string name="fulnem">Username</string>
+    <string name="fono">Phone Number</string>
+    <string name="fonoo">07********</string>
+    <string name="emailad">E-mail Address</string>
+    <string name="countrii">Country: </string>
+    <string name="regista">Register</string>
+
+    <string name="rback">Back</string>
+    <string name="snt">Data Sent Successfully</string>
+    <string name="pwad">Password</string>
+    <string name="enda">OK</string>
+    <string name="pwada">use assigned password</string>
+
+    <string name="badnet">Please ensure your Internet connection is active.</string>
+    <string name="notreg">Please register first for better services</string>
+    <string name="mbaindi2">You have successfully registered</string>
+
+    <string name="t1">Data Collection</string>
+    <string name="t2">Invasive Species</string>
+
+    <string name="t17">Dam Volume (cubic metres)</string>
+
+    <string name="tloc">Select Current Location</string>
+
+    <string-array name="t31">
+        <item>	SELECT	</item>
+        <item> Tea </item>
+        <item> Potatoes </item>
+        <item>  Maize </item>
+        <item>  Beans </item>
+        <item>  Other </item>
+    </string-array>
+
+    <string name="t51q">Crop(s) affected</string>
+
+    <string name="t51qA">Estimate of area affected</string>
+
+    <string-array name="tunits">
+        <item>	UNITS	</item>
+        <item> Acres  </item>
+        <item>	Hectares </item>
+        <item>	Square Feet </item>
+        <item>	Square Metres </item>
+    </string-array>
+
+    <string-array name="t31A">
+        <item>	SELECT	</item>
+        <item> &lt; 1 </item>
+        <item> 1 &#8211; 5 </item>
+        <item>	5 &#8211; 20</item>
+        <item>	&gt; 20</item>
+        <item>	&gt; 100</item>
+        <item>	None </item>
+    </string-array>
+
+
+    <string name="t51qAL">Area Ownership</string>
+
+    <string-array name="t31AL">
+        <item>	SELECT	</item>
+        <item> Small Scale </item>
+        <item> Private </item>
+    </string-array>
+
+    <string-array name="t3">
+        <item>	SELECT	</item>
+        <item>Less than 1 ha</item>
+        <item>1 to 2 hectares</item>
+        <item>3 to 4 hectares</item>
+        <item>5 to 6 hectares</item>
+        <item>More than 6 ha</item>
+    </string-array>
+
+    <string-array name="t31q">
+        <item>	SELECT	</item>
+        <item>Very Severe</item>
+        <item>Severe</item>
+        <item>Moderate</item>
+        <item>Mild</item>
+        <item>None</item>
+    </string-array>
+
+    <string-array name="t34qA">
+        <item>	SELECT	</item>
+        <item>Sunny</item>
+        <item>Rainy</item>
+        <item>Cloudy</item>
+        <item>Windy</item>
+        <item>Cool</item>
+    </string-array>
+
+    <string name="t55qA">Weather at this moment</string>
+
+    <string-array name="t34qAL">
+        <item>	SELECT	</item>
+        <item>Tea Picking</item>
+        <item>Warm Water Sprays</item>
+        <item>None</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="tffs">Seasonal frost frequency</string>
+
+    <string-array name="tffsA">
+        <item>	SELECT	</item>
+        <item>1 &#8211; 5 times</item>
+        <item> &gt; 5 times </item>
+        <item>None</item>
+    </string-array>
+
+    <string name="tffa">Seasonal frost frequency</string>
+
+    <string-array name="tffaA">
+        <item>	SELECT	</item>
+        <item>Every Year</item>
+        <item> Random </item>
+        <item>None</item>
+    </string-array>
+
+    <string name="t55qAL">Measures to take incase of frost</string>
+
+    <string name="t52q">Severity of damage</string>
+
+    <string-array name="t32q">
+        <item>	SELECT	</item>
+        <item>Clear</item>
+        <item>25%</item>
+        <item>50%</item>
+        <item>75%</item>
+        <item>Overcast</item>
+    </string-array>
+
+    <string name="t53q">Cloud cover at this moment</string>
+
+
+    Flat
+    <string name="t52qL">Area Topography</string>
+
+    <string-array name="t31qL">
+        <item>	SELECT	</item>
+        <item>Steep slope</item>
+        <item>Gentle Slope</item>
+        <item>Flat</item>
+    </string-array>
+
+
+    <string-array name="t33q">
+
+        <item>	SELECT	</item>
+        <item>Stormy/Violent</item>
+        <item>High Wind</item>
+        <item>Moderate Breeze</item>
+        <item>Light Wind</item>
+        <item>Calm</item>
+    </string-array>
+
+    <string name="t54q">Wind speed estimate at this moment</string>
+
+    <string-array name="t34q">
+        <item>	SELECT	</item>
+        <item>Sunny</item>
+        <item>Rainy</item>
+        <item>Cloudy</item>
+        <item>	Other </item>
+    </string-array>
+
+    <string name="t55q">Weather on the previous day</string>
+    <string name="t56q">Weather after frost </string>
+
+    <string-array name="t35q">
+        <item>	SELECT	</item>
+        <item>1 &#8211; 3 Days Ago</item>
+        <item>1 Week Ago</item>
+        <item>2 weeks Ago</item>
+        <item>1 &#8211; 3 Months Ago</item>
+        <item>	&gt; 3 Months </item>
+    </string-array>
+
+    <string name="t57q">Last time when it rained</string>
+
+    <string-array name="t36q">
+        <item>	SELECT	</item>
+        <item>Dry</item>
+        <item>Less Dry</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="t58q">Leaf condition</string>
+
+    <string-array name="t37q">
+        <item>	SELECT	</item>
+        <item>More than once a year</item>
+        <item>Once every year</item>
+        <item> Every 2 to 4 years</item>
+        <item>More than 4 years</item>
+        <item>Never before</item>
+        <item>	Other </item>
+
+    </string-array>
+
+    <string name="t59q">Frost Frequency</string>
+
+
+
+
+
+
+    <string name="t4">Infested Area</string>
+
+    <string name="t5">Crops/Plants Afftected</string>
+
+    <string name="t51">Habitat</string>
+
+    <string name="t52">Species Abundance</string>
+
+    <string name="t53">Land Ownership</string>
+
+    <string name="t6">Gross Area</string>
+
+    <string name="tunit">Units</string>
+
+    <string-array name="t644">
+        <item>	UNITS	</item>
+        <item> Acres  </item>
+        <item>	Hectares </item>
+        <item>	Square Feet </item>
+        <item>	Square Metres </item>
+    </string-array>
+
+
+    <string name="t10">County</string>
+
+    <string-array name="t11">
+        <item>	SELECT	</item>
+        <item>	    Baringo 	</item>
+        <item>	    Bomet 	</item>
+        <item>	    Bungoma 	</item>
+        <item>	    Busia 	</item>
+        <item>	    Elgeyo Marakwet 	</item>
+        <item>	    Embu 	</item>
+        <item>	    Garissa 	</item>
+        <item>	    Homa Bay 	</item>
+        <item>	    Isiolo 	</item>
+        <item>	    Kajiado 	</item>
+        <item>	    Kakamega 	</item>
+        <item>	    Kericho 	</item>
+        <item>	    Kiambu 	</item>
+        <item>	    Kilifi 	</item>
+        <item>	    Kirinyaga 	</item>
+        <item>	    Kisii 	</item>
+        <item>	    Kisumu 	</item>
+        <item>	    Kitui 	</item>
+        <item>	    Kwale 	</item>
+        <item>	    Laikipia 	</item>
+        <item>	    Lamu 	</item>
+        <item>	    Machakos 	</item>
+        <item>	    Makueni 	</item>
+        <item>	    Mandera 	</item>
+        <item>	    Meru 	</item>
+        <item>	    Migori 	</item>
+        <item>	    Marsabit 	</item>
+        <item>	    Mombasa 	</item>
+        <item>	    Muranga 	</item>
+        <item>	    Nairobi 	</item>
+        <item>	    Nakuru 	</item>
+        <item>	    Nandi 	</item>
+        <item>	    Narok 	</item>
+        <item>	    Nyamira 	</item>
+        <item>	    Nyandarua 	</item>
+        <item>	    Nyeri 	</item>
+        <item>	    Samburu 	</item>
+        <item>	    Siaya 	</item>
+        <item>	    Taita Taveta 	</item>
+        <item>	    Tana River 	</item>
+        <item>	    Tharaka Nithi 	</item>
+        <item>	    Trans Nzoia 	</item>
+        <item>	    Turkana 	</item>
+        <item>	    Uasin Gishu 	</item>
+        <item>	    Vihiga 	</item>
+        <item>	    Wajir 	</item>
+        <item>	    West Pokot 	</item>
+
+
+    </string-array>
+
+
+    <string name="t12">Area Accessibility</string>
+
+    <string name="t13">Soil Investigation</string>
+    <string name="t14">Foundation Excavation</string>
+    <string name="t15">Foundation Concreting</string>
+    <string name="t16">Location Description</string>
+
+    <string name="ty">Accessible</string>
+    <string name="tn">Inaccessible</string>
+
+    <string-array name="t311">
+        <item>	SELECT	</item>
+        <item> Edge: Upland / Wetland </item>
+        <item>	Edge: Field / Forest </item>
+        <item>	Edge: Lake </item>
+        <item>	Edge: Roadside </item>
+        <item>	Open Field </item>
+        <item>	Old Field </item>
+        <item>	Right-of-way </item>
+        <item>	Forest: Conifer </item>
+        <item>	Forest: Hardwood </item>
+        <item>	Forest: Mixed </item>
+        <item>	Dune </item>
+        <item>	Beach </item>
+        <item>	Park </item>
+        <item>	Rocky Outcrops </item>
+        <item>	Wetland: Marsh </item>
+        <item>	Wetland: Swamp </item>
+        <item>	Wetland: Bog </item>
+        <item>	Stream bank </item>
+        <item>	Yard / Garden </item>
+        <item>	Agricultural Field </item>
+        <item>	Abandoned lot / Home site </item>
+        <item>	Other </item>
+    </string-array>
+
+
+
+    <string-array name="t312">
+        <item>	SELECT	</item>
+        <item> Single Plant </item>
+        <item>	Scattered Plants </item>
+        <item>	Dense Monoculture </item>
+        <item>	Scattered Dense Patches </item>
+    </string-array>
+
+    <string-array name="t313">
+        <item>	SELECT	</item>
+        <item> Private Land  </item>
+        <item>	Public Land </item>
+        <item>	Community Land </item>
+        <item>	Unknown </item>
+    </string-array>
+
+
+    <string name="savo">Save</string>
+    <string name="savv">Data has been successfully saved.</string>
+    <string name="usavv">User has been successfully registered.</string>
+    <string name="msavv">User account is missing. Contact the administrator.</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="constantori_nomedia">Folders not created. Ensure all permissions enabled.</string>
+    <string name="constantori_nomedia_p">Please ensure all permissions enabled.</string>
+    <string name="constantori_nowrite_a">Folders not created. Device is write-protected.</string>
+    <string name="constantori_photo">Camera error. Take photograph again.</string>
+    <string name="constantori_sim">No SIM Card!</string>
+    <string name="constantori_perm_enabled">Permissions enabled.</string>
+    <string name="constantori_perm_denied">Permission(s) not enabled.</string>
+    <string name="constantori_map_miss">Mapping farm option is selected but not done.</string>
+    <string name="constantori_form_miss">Form data must be saved first!</string>
+    <string name="constantori_photo_miss">Photograph taking option is selected but not done.</string>
+
+    <string name="general_googleplay">Google Play Services is out-of-date/disabled on your phone.</string>
+    <string name="general_location">GPS Location services must be enabled.</string>
+    <string name="general_permission">This application needs to access your :</string>
+    <string name="general_permission_enabled">All permissions enabled.</string>
+    <string name="general_permission_denied">Some permission(s) denied.</string>
+
+</resources>

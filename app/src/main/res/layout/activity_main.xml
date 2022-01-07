@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+	android:weightSum="100"
+    android:background="@drawable/dodok_0"
+	android:backgroundTint="@color/overlay_light_50"
+	android:backgroundTintMode="screen"
+    tools:context=".MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+<RelativeLayout
+        android:orientation="horizontal"
+        android:layout_weight="20"
+		android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+	<ImageView
+		android:id="@+id/imgga"
+		android:layout_width="150dp"
+		android:layout_height="150dp"
+		android:layout_centerHorizontal="true"
+		android:contentDescription="@string/app_name"
+		android:src="@drawable/snowflake" />
+
+	<TextView
+		android:id="@+id/ttl"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/imgga"
+		android:layout_centerHorizontal="true"
+		android:text="@string/app_name"
+		android:textColor="@color/colorRedSpecial"
+		android:textSize="20sp"
+		android:textStyle="bold" />
+
+    <TextSwitcher
+        android:id="@+id/textswitcher"
+        android:layout_width="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_below="@+id/ttl"
+		android:layout_marginTop="3dp"
+        android:layout_height="wrap_content" />
+    
+
+    
+    </RelativeLayout>
+
+
+    <LinearLayout 
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_weight="75"
+        android:layout_height="0dp"
+        >
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        
+    <LinearLayout
+        android:id="@+id/container1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    
+    
+    <LinearLayout
+		android:id="@+id/btn1"
+		style="@android:style/Widget.Button"
+		android:layout_width="250dp"
+		android:layout_height="60dp"
+		android:layout_margin="10dp"
+		android:background="@drawable/comlineemain"
+		android:layout_marginTop="15dp"
+		android:gravity="center_vertical">
+
+		<ImageView
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_marginRight="5dp"
+			android:layout_marginLeft="10dp"
+			android:contentDescription="@string/but1"
+			android:src="@drawable/ic_baseline_ac_unit_24" />
+
+		<TextView
+			android:id="@+id/image_button_1_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textStyle="bold"
+			android:layout_marginLeft="20dp"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textColor="@android:color/background_light"
+			android:text ="@string/but1" />
+
+	</LinearLayout>
+	
+    
+        <LinearLayout
+		android:id="@+id/btn2"
+		style="@android:style/Widget.Button"
+		android:layout_width="250dp"
+		android:layout_height="60dp"
+		android:layout_margin="10dp"
+		android:background="@drawable/comlineemain"
+		android:layout_marginTop="15dp"
+		android:gravity="center_vertical">
+
+		<ImageView
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_marginRight="5dp"
+			android:layout_marginLeft="10dp"
+			android:contentDescription="@string/but2"
+			android:src="@drawable/ic_baseline_add_location_24" />
+
+		<TextView
+			android:id="@+id/image_button_2_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textStyle="bold"
+			android:layout_marginLeft="20dp"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textColor="@android:color/background_light"
+			android:text ="@string/but2" />
+
+	</LinearLayout>
+	
+        <LinearLayout
+		android:id="@+id/btn3"
+		style="@android:style/Widget.Button"
+		android:layout_width="250dp"
+		android:layout_height="60dp"
+		android:layout_margin="10dp"
+		android:background="@drawable/comlineemain"
+		android:layout_marginTop="15dp"
+		android:gravity="center_vertical">
+
+		<ImageView
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_marginRight="5dp"
+			android:layout_marginLeft="10dp"
+			android:contentDescription="@string/but3"
+			android:src="@drawable/ic_baseline_cloud_upload_24" />
+
+		<TextView
+			android:id="@+id/image_button_3_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textStyle="bold"
+			android:layout_marginLeft="20dp"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textColor="@android:color/background_light"
+			android:text ="Send Data" />
+
+	</LinearLayout>
+    
+
+                
+        </LinearLayout>
+       </ScrollView>
+      </LinearLayout>
+      
+    <RelativeLayout
+		android:id="@+id/actv"
+		android:layout_width="match_parent"
+		android:layout_weight="5"
+		android:layout_height="0dp"
+		android:background="@drawable/statcomlinee"
+		android:layout_gravity="bottom"
+		android:gravity="center"
+		>
+		
+        
+        <TextView
+       android:id="@+id/sitato"
+       android:layout_width="wrap_content"
+       android:textAppearance="?android:attr/textAppearanceSmall"
+	   android:textColor="#ddFFFFFF"
+			android:textStyle="bold"
+       android:layout_height="wrap_content"
+       android:text="@string/locstat"
+       >
+   </TextView>
+   
+        <ImageView
+            android:id = "@+id/procss"
+        android:layout_toRightOf="@+id/sitato"
+        android:layout_width="10dp"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/sitato"
+        android:layout_gravity="center"
+        android:contentDescription="@string/app_name"
+        android:layout_height="20dp"
+        />
+   
+         
+   
+	</RelativeLayout>
+    
+  </LinearLayout>

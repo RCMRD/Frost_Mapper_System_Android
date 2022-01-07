@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    android:background="#FFFFFF"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/title6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="Location Data"
+        android:textColor="@color/colorRedSpecial"
+        android:textStyle="bold"
+        android:textSize="17sp" />
+
+    <ScrollView
+        android:id="@+id/scrolli"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:id="@+id/nomi11AL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000"
+                android:text="Area Name"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/s11AAL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nomi11AL"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:hint="Location Name"
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/nomi1AL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/s11AAL"
+                android:layout_marginTop="15dp"
+                android:text="Area Affected by Frost?"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+
+
+            <RadioGroup
+                android:id="@+id/radiops11AL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nomi1AL"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/prevv11AL"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/ybb"
+                    android:button="@null"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:textColor="@drawable/a"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/neww11AL"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/ybb"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:textColor="@drawable/a"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/nomi30L"
+                android:layout_below="@+id/radiops11AL"
+                android:layout_width="wrap_content"
+                android:layout_alignLeft="@+id/nomi11AL"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentLeft="true"
+                android:textColor="#000000"
+                android:text="Crop(s) Affected"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/s2L"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nomi30L"
+                android:layout_alignLeft="@+id/nomi11AL"
+                android:layout_marginTop="3dp"
+                android:entries="@array/t31"
+                android:prompt="@string/t51q" />
+
+            <EditText
+                android:id="@+id/s82L"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:enabled="false"
+                android:singleLine="true"
+                android:hint="@string/s8a"
+                android:layout_below="@+id/s2L"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+            <TextView
+                android:id="@+id/nomiL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/s82L"
+                android:textColor="#000000"
+                android:text="Area Ownership"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/s1L"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nomiL"
+                android:layout_alignLeft="@+id/nomiL"
+                android:layout_marginTop="3dp"
+                android:entries="@array/t31AL"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:prompt="@string/t51qAL" />
+
+            <TextView
+                android:id="@+id/nomi303L"
+                android:layout_below="@+id/s1L"
+                android:layout_width="wrap_content"
+                android:layout_alignLeft="@+id/nomiL"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentLeft="true"
+                android:textColor="#000000"
+                android:text="Area Topography"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/s3L"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/t31qL"
+                android:layout_marginTop="3dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:prompt="@string/t52qL"
+                android:layout_below="@+id/nomi303L"
+                />
+
+
+
+            <TextView
+                android:id="@+id/nomi11BL"
+                android:layout_below="@+id/s3L"
+                android:layout_width="wrap_content"
+                android:layout_alignLeft="@+id/nomi11AL"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000"
+                android:text="Presence of Forest?"
+                android:textSize="16sp" />
+
+
+
+            <RadioGroup
+                android:id="@+id/radiops11BL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nomi11BL"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/prevv11BL"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/ybb"
+                    android:button="@null"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:textColor="@drawable/a"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/neww11BL"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/ybb"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:textColor="@drawable/a"
+                    android:text="No" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/nomi11CL"
+                android:layout_below="@+id/radiops11BL"
+                android:layout_width="wrap_content"
+                android:layout_alignLeft="@+id/nomiL"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000"
+                android:text="Presence of Water Body?"
+                android:textSize="16sp" />
+
+
+
+            <RadioGroup
+                android:id="@+id/radiops11CL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nomi11CL"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/prevv11CL"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/ybb"
+                    android:button="@null"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:textColor="@drawable/a"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/neww11CL"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/ybb"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:textColor="@drawable/a"
+                    android:text="No" />
+            </RadioGroup>
+
+
+
+
+
+            <TextView
+                android:id="@+id/nomi6AL"
+                android:layout_below="@+id/radiops11CL"
+                android:layout_width="wrap_content"
+                android:layout_alignLeft="@+id/nomi11AL"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentLeft="true"
+                android:textColor="#000000"
+                android:text="Measures Taken Incase of Frost (Tea Crop)"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/s6AL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nomi6AL"
+                android:layout_marginTop="3dp"
+                android:layout_alignLeft="@+id/nomi11AL"
+                android:entries="@array/t34qAL"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:prompt="@string/t55qAL" />
+
+            <EditText
+                android:id="@+id/s87"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginTop="3dp"
+                android:enabled="false"
+                android:layout_alignLeft="@+id/nomi11AL"
+                android:singleLine="true"
+                android:hint="Specify"
+                android:layout_below="@+id/s6AL"
+                />
+
+            <TextView
+                android:id="@+id/nomi7AL"
+                android:layout_below="@+id/s87"
+                android:layout_width="wrap_content"
+                android:layout_alignLeft="@+id/nomi11AL"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentLeft="true"
+                android:textColor="#000000"
+                android:text="Frost Frequency (Seasonal)"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/s7AL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nomi7AL"
+                android:layout_marginTop="3dp"
+                android:layout_alignLeft="@+id/nomi11AL"
+                android:entries="@array/tffsA"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:prompt="@string/tffs" />
+
+            <TextView
+                android:id="@+id/nomi8AL"
+                android:layout_below="@+id/s7AL"
+                android:layout_width="wrap_content"
+                android:layout_alignLeft="@+id/nomi11AL"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentLeft="true"
+                android:textColor="#000000"
+                android:text="Frost Frequency (Annually)"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/s8AL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nomi8AL"
+                android:layout_marginTop="3dp"
+                android:layout_alignLeft="@+id/nomi11AL"
+                android:entries="@array/tffaA"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:prompt="@string/tffa" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/backo"
+            android:layout_width="100dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/comlinee"
+            android:textColor="@android:color/background_light"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:text="@string/rback" />
+
+        <Button
+            android:id="@+id/doneo"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/comlinee"
+            android:text="@string/savo"
+            android:textColor="@android:color/background_light" />
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
