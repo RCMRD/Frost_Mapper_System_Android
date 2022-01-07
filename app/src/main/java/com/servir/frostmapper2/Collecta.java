@@ -44,10 +44,14 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static android.os.Environment.getExternalStorageDirectory;
 
 public class Collecta extends AppCompatActivity {
 
@@ -413,7 +417,7 @@ public class Collecta extends AppCompatActivity {
 
 			saveImage(bitmap);
 
-			String root2 = Environment.getExternalStorageDirectory() + "/" + Environment.DIRECTORY_DCIM + "/";
+			String root2 = getExternalStorageDirectory() + "/" + Environment.DIRECTORY_DCIM + "/";
 			File myDir2 = new File(root2);
 			File file2 = new File(myDir2, "temp.jpg");
 			if (file2.exists()){
@@ -429,6 +433,8 @@ public class Collecta extends AppCompatActivity {
 
 	private File createImageFile() throws IOException {
 		// Create an image file name
+
+		File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
 
 		File image = File.createTempFile(
 				"temp",
@@ -580,7 +586,7 @@ public class Collecta extends AppCompatActivity {
 		if (Build.VERSION.SDK_INT < 23) {
 
 			Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-			f = new File(Environment.getExternalStorageDirectory(), picnm);
+			f = new File(getExternalStorageDirectory(), picnm);
 			intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
 			startActivityForResult(intent, PICTURE_STUFF);
 
@@ -592,7 +598,7 @@ public class Collecta extends AppCompatActivity {
 				startActivityForResult(intent, PICTURE_STUFF);
 
 			} catch (Exception zz) {
-				Log.e("camera", zz.getMessage());
+				Log.e(Constantori.APP_ERROR_PREFIX+"_Camera", "exception", zz);
 				Toast.makeText(context,  Constantori.ERROR_NO_MEDIA_PERMISSION, Toast.LENGTH_LONG).show();
 			}
 

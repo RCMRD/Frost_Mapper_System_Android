@@ -239,10 +239,10 @@ public class Constantori {
     public static final String ALL_FOLDER = "Frost_Mapper";
     public static final String PIC_PATH = "Images";
 
-    public static File folder = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +
+    public static File folder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM) +
             File.separator + Constantori.ALL_FOLDER);
 
-    public static File folderImages = new File(folder.getAbsolutePath() +
+    public static File folderImages = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM) + File.separator +  folder.getAbsolutePath() +
             File.separator + Constantori.PIC_PATH);
 
     public static boolean createAllFolders() {

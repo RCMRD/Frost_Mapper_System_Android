@@ -319,7 +319,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
 					if (Constantori.isConnectedToInternet()) {
 				
-					    int hexa = 0;
+					    boolean data_sent = false;
+					    boolean loc_sent = false;
+					    boolean pic_sent = false;
 
                         if (db.getRowCount(Constantori.TABLE_DAT,Constantori.KEY_DATSTATUS,Constantori.SAVE_DATSTATUS) > 0) {
 
@@ -347,13 +349,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                                 new NetPost(context, "maindata_PostJSON", final_array, "Sending... Make sure internet connection is active", Constantori.TABLE_DAT, Constantori.KEY_DATSTATUS, MainActivity.this).execute(new String[]{URL_LINK});
 
+                                data_sent = true;
 
                             }catch (Exception xx){
                                 Log.e(Constantori.APP_ERROR_PREFIX + "_mainPost1", "exception", xx);
                             }
 
-                        }else{
-                            hexa++;
                         }
 
                         if (db.getRowCount(Constantori.TABLE_LOC,Constantori.KEY_LOCSTATUS,Constantori.SAVE_DATSTATUS) > 0) {
@@ -381,15 +382,15 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
                                 new NetPost(context, "locdata_PostJSON", final_array, "Sending... Make sure internet connection is active", Constantori.TABLE_LOC, Constantori.KEY_LOCSTATUS, MainActivity.this).execute(new String[]{URL_LINK});
 
+                                loc_sent = true;
+
                             }catch (Exception xx){
                                 Log.e(Constantori.APP_ERROR_PREFIX + "_mainPost2", "exception", xx);
                             }
 
-                        }else{
-                            hexa++;
                         }
 
-                        if(db.getRowCount(Constantori.TABLE_PIC, "","") > 0){
+                        if(db.getRowCount(Constantori.TABLE_PIC, Constantori.KEY_SENDSTAT,Constantori.POST_DATSTATUS) > 0){
 
                             SimpleDateFormat dateFormat = new SimpleDateFormat("HHmmss", java.util.Locale.getDefault());
                             zipfilo = userRef + "_" + dateFormat.format(new Date()) + ".zip";
@@ -409,23 +410,25 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                                     new NetPost(context, "maindata_PostImages", picArray, "Sending Images... Make sure internet connection is active", Constantori.TABLE_PIC, "", MainActivity.this).execute(new String[]{URL_LINK});
                                 }
 
+                                pic_sent = true;
+
                             }catch (Exception xx){
                                 Log.e(Constantori.APP_ERROR_PREFIX + "_mainPost3", "exception", xx);
                             }
 
-                        }else{
-                            hexa++;
                         }
 
-                        if (hexa > 0){
-                            Toast.makeText(getBaseContext(), "No pending data in internal database", Toast.LENGTH_LONG).show();
-                        }else{
+                        if (data_sent || loc_sent || pic_sent){
                             Constantori.diambaidsent(View, context);
+                        }
+
+                        if(!data_sent && !loc_sent && !pic_sent){
+                            Toast.makeText(getBaseContext(), "No pending data in internal database", Toast.LENGTH_LONG).show();
                         }
 					
 					}else{
-                                Toast.makeText(context,Constantori.ERROR_NO_INTERNET,Toast.LENGTH_LONG).show();
-                         }
+					    Toast.makeText(context,Constantori.ERROR_NO_INTERNET,Toast.LENGTH_LONG).show();
+					}
 
 
                 }
@@ -1026,9 +1029,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         } catch(Exception e) {
             Log.e(" error ---- ", "exception", e);
-            Toast.makeText(context,"Image(s) not found at this time." ,Toast.LENGTH_LONG).show();
-
-
+            //Toast.makeText(context,"Image(s) not found at this time." ,Toast.LENGTH_LONG).show();
         }
     }
 
@@ -1138,7 +1139,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                }else if (result.contains("inflating")){
 
                     Log.e(Constantori.APP_ERROR_PREFIX + "_mainJSON3", "Images Sent");
-                    db.resetTable(Constantori.TABLE_PIC,Constantori.KEY_SENDSTAT,Constantori.SAVE_DATSTATUS);
+                    db.resetTable(Constantori.TABLE_PIC,Constantori.KEY_SENDSTAT,Constantori.POST_DATSTATUS);
 
                 }
 
