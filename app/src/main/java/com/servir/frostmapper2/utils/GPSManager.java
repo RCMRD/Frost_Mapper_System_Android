@@ -1,10 +1,8 @@
-package com.servir.frostmapper.utils;
+package com.servir.frostmapper2.utils;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Service;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;

@@ -1,4 +1,4 @@
-package com.servir.frostmapper.utils;
+package com.servir.frostmapper2.utils;
 
 
 import android.app.Activity;
@@ -35,7 +35,7 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
-import com.servir.frostmapper.R;
+import com.servir.frostmapper2.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

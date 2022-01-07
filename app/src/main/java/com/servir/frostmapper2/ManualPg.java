@@ -1,4 +1,4 @@
-package com.servir.frostmapper;
+package com.servir.frostmapper2;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

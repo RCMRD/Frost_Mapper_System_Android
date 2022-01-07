@@ -1,4 +1,4 @@
-package com.servir.frostmapper;
+package com.servir.frostmapper2;
 
 
 import android.app.Dialog;
@@ -17,14 +17,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
-import com.servir.frostmapper.utils.Constantori;
-import com.servir.frostmapper.utils.DatabaseHandler;
+import com.servir.frostmapper2.utils.Constantori;
+import com.servir.frostmapper2.utils.DatabaseHandler;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CollectaLoc extends AppCompatActivity {

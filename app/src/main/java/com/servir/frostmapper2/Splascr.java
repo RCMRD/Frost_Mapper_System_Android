@@ -1,4 +1,4 @@
-package com.servir.frostmapper;
+package com.servir.frostmapper2;
 
 
 import android.content.Context;
@@ -8,9 +8,9 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 
-import com.servir.frostmapper.utils.AsyncTaskCompleteListener;
-import com.servir.frostmapper.utils.Constantori;
-import com.servir.frostmapper.utils.NetPost;
+import com.servir.frostmapper2.utils.AsyncTaskCompleteListener;
+import com.servir.frostmapper2.utils.Constantori;
+import com.servir.frostmapper2.utils.NetPost;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

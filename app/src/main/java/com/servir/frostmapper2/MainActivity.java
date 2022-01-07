@@ -1,4 +1,4 @@
-package com.servir.frostmapper;
+package com.servir.frostmapper2;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -26,11 +26,10 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.material.snackbar.Snackbar;
-import com.servir.frostmapper.utils.AsyncTaskCompleteListener;
-import com.servir.frostmapper.utils.Constantori;
-import com.servir.frostmapper.utils.DatabaseHandler;
-import com.servir.frostmapper.utils.NetPost;
+import com.servir.frostmapper2.utils.AsyncTaskCompleteListener;
+import com.servir.frostmapper2.utils.Constantori;
+import com.servir.frostmapper2.utils.DatabaseHandler;
+import com.servir.frostmapper2.utils.NetPost;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -44,7 +43,7 @@ import android.graphics.Typeface;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
+
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;

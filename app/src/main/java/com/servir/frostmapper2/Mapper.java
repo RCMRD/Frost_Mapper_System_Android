@@ -1,4 +1,4 @@
-package com.servir.frostmapper;
+package com.servir.frostmapper2;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -17,7 +17,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
-import com.servir.frostmapper.utils.Constantori;
+import com.servir.frostmapper2.utils.Constantori;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

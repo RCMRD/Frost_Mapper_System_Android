@@ -1,4 +1,4 @@
-package com.servir.frostmapper.utils;
+package com.servir.frostmapper2.utils;
 
 import android.content.Context;
 import android.content.ContextWrapper;

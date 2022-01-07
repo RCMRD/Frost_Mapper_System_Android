@@ -1,4 +1,4 @@
-package com.servir.frostmapper;
+package com.servir.frostmapper2;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -19,11 +19,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.servir.frostmapper.utils.ApplicationContextor;
-import com.servir.frostmapper.utils.AsyncTaskCompleteListener;
-import com.servir.frostmapper.utils.Constantori;
-import com.servir.frostmapper.utils.DatabaseHandler;
-import com.servir.frostmapper.utils.NetPost;
+import com.servir.frostmapper2.utils.ApplicationContextor;
+import com.servir.frostmapper2.utils.AsyncTaskCompleteListener;
+import com.servir.frostmapper2.utils.Constantori;
+import com.servir.frostmapper2.utils.DatabaseHandler;
+import com.servir.frostmapper2.utils.NetPost;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.material.snackbar.Snackbar;

@@ -1,4 +1,4 @@
-package com.servir.frostmapper.utils;
+package com.servir.frostmapper2.utils;
 
 import android.app.ProgressDialog;
 import android.content.Context;

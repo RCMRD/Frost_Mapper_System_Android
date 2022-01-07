@@ -1,11 +1,11 @@
-package com.servir.frostmapper.utils;
+package com.servir.frostmapper2.utils;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
-import com.servir.frostmapper.MainActivity;
+import com.servir.frostmapper2.MainActivity;
 
 /**
  * Created by Steve on 2/24/2017.
