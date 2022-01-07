@@ -54,7 +54,7 @@ public class Constantori {
     //DATABASE//////////////////////////////////////////////////////////////
 
     public static final String APP_ERROR_PREFIX = "FM";
-    public static final int DATABASE_VERSION = 2;
+    public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "FrstDB";
     public static  final Context DATABASE_Context = ApplicationContextor.getAppContext();
 

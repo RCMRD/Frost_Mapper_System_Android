@@ -18,13 +18,13 @@ android {
         }
     }
 
-    compileSdkVersion 29
+    compileSdkVersion 30
     defaultConfig {
         applicationId "com.servir.frostmapper"
         minSdkVersion 24
-        targetSdkVersion 29
-        versionCode 4
-        versionName "FM_4_06012022"
+        targetSdkVersion 30
+        versionCode 1
+        versionName "FM_1_06012022"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
