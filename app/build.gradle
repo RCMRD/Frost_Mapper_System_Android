@@ -20,7 +20,7 @@ android {
 
     compileSdkVersion 30
     defaultConfig {
-        applicationId "com.servir.frostmapper"
+        applicationId "com.servir.frostmapper2"
         minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
