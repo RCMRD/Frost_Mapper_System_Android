@@ -209,7 +209,7 @@ public class Constantori {
     public static final String ERROR_USER_EXISTS = "You are already registered.";
     public static final String ERROR_SERVER_ISSUE = "Server updating, please wait and try again";
     public static final String ERROR_NO_INTERNET = "No internet connection, please connect and try again.";
-    public static final String ERROR_APPROVAL = "You have not been approved yet by the administrator.";
+    public static final String ERROR_APPROVAL = "You have not been approved yet by the administrator (contact jwanjohi@rcmrd.org).";
     public static final String ERROR_PASSWORD = "Please use correct password";
 
     public final static int REQUEST_CODE_RECOVER_PLAY_SERVICES = 200;
