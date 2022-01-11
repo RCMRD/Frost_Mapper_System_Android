@@ -12,8 +12,9 @@
     <string name="err_msg_phone">Please enter a valid phone number</string>
     <string name="err_msg_org" translatable="false">Please enter your organisation name</string>
     <string name="err_msg_role" translatable="false">Please enter your role/position/department</string>
-    <string name="err_msg_password">Please enter a password</string>
-    <string name="err_msg_password2">Please make sure the passowrd match</string>
+    <string name="err_msg_password">Please enter a password.</string>
+    <string name="err_msg_password2">Please make sure the passwords match.</string>
+    <string name="err_msg_code">Please use the code sent to your email.</string>
 
     <string name="signin_details_wrong">Incorrect detail used. Contact the administrator for help.</string>
     <string name="signin_password_wrong">Please use the right password.</string>
@@ -25,6 +26,9 @@
     <string name="signin_dev_error">E434: Please contact the administrator. </string>
     <string name="signin_message">Signing in…</string>
     <string name="signin_locations">Loading Data…</string>
+    <string name="signin_getcode">Sending code…</string>
+    <string name="signin_setpass">Changing password…</string>
+    <string name="signin_passwordchanged">Password changed successfully</string>
     <string name="signin_setup">Fetching records…</string>
 
     <string name="signup_message">Registering…</string>
@@ -46,12 +50,14 @@
     <string name="fono">Phone Number</string>
     <string name="fonoo">07********</string>
     <string name="emailad">E-mail Address</string>
+    <string name="code">Security Code</string>
     <string name="countrii">Country: </string>
     <string name="regista">Register</string>
 
     <string name="rback">Back</string>
     <string name="snt">Data Sent Successfully</string>
     <string name="pwad">Password</string>
+    <string name="pwad2">Confirm Password</string>
     <string name="enda">OK</string>
     <string name="pwada">use assigned password</string>
 

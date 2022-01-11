@@ -79,6 +79,9 @@ public class Constantori {
     public static final String KEY_USERLON = "_userlon";
     public static final String KEY_USERREF = "_userref";
 
+    //forgot password
+    public static final String KEY_USERCODE = "_usercode";
+
     //Fields - Location table
     public static final String KEY_LOCLOC = "_datloc";
     public static final String KEY_LOCAAF = "_dataaf";
@@ -156,12 +159,16 @@ public class Constantori {
     public static final String ERROR_NO_WRITE_ACCESS = ApplicationContextor.getAppContext().getResources().getString(R.string.constantori_nowrite_a);
     public static final String ERROR_TAKE_PHOTO = ApplicationContextor.getAppContext().getResources().getString(R.string.constantori_photo);
     public static final String ERROR_NO_SIM = ApplicationContextor.getAppContext().getResources().getString(R.string.constantori_sim);
+    public static final String ERROR_PASSWORD_CONF = ApplicationContextor.getAppContext().getResources().getString(R.string.err_msg_password2);
+    public static final String ERROR_EMAIL = ApplicationContextor.getAppContext().getResources().getString(R.string.err_msg_email);
+    public static final String ERROR_CODE = ApplicationContextor.getAppContext().getResources().getString(R.string.err_msg_code);
 
     public static final String MSG_PERMISSIONS_ENABLED = ApplicationContextor.getAppContext().getResources().getString(R.string.constantori_perm_enabled);
     public static final String MSG_PERMISSIONS_DENIED = ApplicationContextor.getAppContext().getResources().getString(R.string.constantori_perm_denied);
     public static final String MSG_MISSING_MAP = ApplicationContextor.getAppContext().getResources().getString(R.string.constantori_map_miss);
     public static final String MSG_MISSING_FORM = ApplicationContextor.getAppContext().getResources().getString(R.string.constantori_form_miss);
     public static final String MSG_MISSING_PHOTO = ApplicationContextor.getAppContext().getResources().getString(R.string.constantori_photo_miss);
+    public static final String MSG_PASSWORD_CHANGED = ApplicationContextor.getAppContext().getResources().getString(R.string.signin_passwordchanged);
 
     //////////////////////////////////////////////////////////////////////////////
 

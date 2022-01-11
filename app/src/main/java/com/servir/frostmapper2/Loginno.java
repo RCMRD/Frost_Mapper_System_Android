@@ -1,6 +1,7 @@
 package com.servir.frostmapper2;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,6 +19,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.servir.frostmapper2.utils.ApplicationContextor;
 import com.servir.frostmapper2.utils.AsyncTaskCompleteListener;
@@ -32,7 +34,9 @@ import com.google.android.material.textfield.TextInputLayout;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -49,13 +53,14 @@ public class Loginno extends AppCompatActivity implements AsyncTaskCompleteListe
 
     TextInputLayout Tlogphone, Tlogpass;
     EditText edtPhone, edtPass;
-    TextView logsignupA;
     View View;
 
     String dbPhone = "";
     String dbPass = "";
     String strPhone = "";
     String strPass="";
+
+    Boolean changedPwd, codeSent = false;
 
     String userstatus, usertoken, userid;
 
@@ -129,8 +134,6 @@ public class Loginno extends AppCompatActivity implements AsyncTaskCompleteListe
         logsigninA = (Button) findViewById(R.id.logingia);
         edtPass = (EditText) findViewById(R.id.edtUserpassword);
         edtPhone = (EditText) findViewById(R.id.edtUserphone);
-        logsignupA = (TextView) findViewById(R.id.logreg);
-
         edtPhone.addTextChangedListener(new MyTextWatcher(Tlogphone));
         edtPass.addTextChangedListener(new MyTextWatcher(Tlogpass));
 
@@ -275,7 +278,7 @@ public class Loginno extends AppCompatActivity implements AsyncTaskCompleteListe
 
     public void onClick_fd(View v)
     {
-        //
+        dlg_forgot_password(View);
     }
 
     public void hideSoftKeyboard() {
@@ -742,6 +745,74 @@ public class Loginno extends AppCompatActivity implements AsyncTaskCompleteListe
                 }
                 break;
 
+
+            case "loginforgotemail_PostJSON":
+
+                if (result.equals("202")) {
+                    Snackbar.make(parent_view, Constantori.ERROR_APPROVAL, Snackbar.LENGTH_SHORT).show();
+                }else if(result.equals("101")) {
+                    Snackbar.make(parent_view, Constantori.ERROR_PASSWORD, Snackbar.LENGTH_SHORT).show();
+                }else if(result.equals(null) || result.equals("303")) {
+                    Snackbar.make(parent_view, Constantori.ERROR_SERVER_ISSUE, Snackbar.LENGTH_SHORT).show();
+                }else if(result.equals("Issue")) {
+                    Constantori.dlgNoNet(View, context);
+
+                }else {
+
+                    try {
+
+                        JSONArray receivedResponse = new JSONArray(result);
+
+                        Log.e(Constantori.APP_ERROR_PREFIX + "_loginno_code", receivedResponse.toString());
+
+                        String code = receivedResponse.getJSONObject(0).getString(Constantori.KEY_USERCODE);
+
+                        Constantori.setSharedPreference(Constantori.KEY_USERCODE, code);
+
+
+                    } catch (Exception xx) {
+
+                        Log.e(Constantori.APP_ERROR_PREFIX + "_loginnoErrorCode", result);
+                        Snackbar.make(parent_view, getResources().getString(R.string.signin_dev_error), Snackbar.LENGTH_SHORT).show();
+                        Log.e(Constantori.APP_ERROR_PREFIX + "_loginnoError", "exception", xx);
+
+                    }
+
+                }
+                break;
+
+            case "loginforgotpassword_PostJSON":
+
+                if (result.equals("202")) {
+                    Snackbar.make(parent_view, Constantori.ERROR_APPROVAL, Snackbar.LENGTH_SHORT).show();
+                }else if(result.equals("101")) {
+                    Snackbar.make(parent_view, Constantori.ERROR_PASSWORD, Snackbar.LENGTH_SHORT).show();
+                }else if(result.equals(null) || result.equals("303")) {
+                    Snackbar.make(parent_view, Constantori.ERROR_SERVER_ISSUE, Snackbar.LENGTH_SHORT).show();
+                }else if(result.equals("Issue")) {
+                    Constantori.dlgNoNet(View, context);
+
+                }else {
+
+                    try {
+
+                        JSONArray receivedResponse = new JSONArray(result);
+
+                        Log.e(Constantori.APP_ERROR_PREFIX + "_loginno_password", receivedResponse.toString());
+
+                        Snackbar.make(parent_view, Constantori.MSG_PASSWORD_CHANGED, Snackbar.LENGTH_LONG).show();
+
+                    } catch (Exception xx) {
+
+                        Log.e(Constantori.APP_ERROR_PREFIX + "_loginnoErrorCode", result);
+                        Snackbar.make(parent_view, getResources().getString(R.string.signin_dev_error), Snackbar.LENGTH_SHORT).show();
+                        Log.e(Constantori.APP_ERROR_PREFIX + "_loginnoError", "exception", xx);
+
+                    }
+
+                }
+                break;
+
             default:
 
                 break;
@@ -809,6 +880,119 @@ public class Loginno extends AppCompatActivity implements AsyncTaskCompleteListe
 
     }
 
+
+
+    public void dlg_forgot_password(View v) {
+        final Dialog mbott = new Dialog(Loginno.this, android.R.style.Theme_Translucent_NoTitleBar);
+        mbott.setContentView(R.layout.mbaind_forgot_password);
+        mbott.setCanceledOnTouchOutside(false);
+        mbott.setCancelable(false);
+        WindowManager.LayoutParams lp = mbott.getWindow().getAttributes();
+        lp.dimAmount=0.85f;
+        mbott.getWindow().setAttributes(lp);
+        mbott.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        mbott.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+        Button mbano = (Button) mbott.findViewById(R.id.rback);
+        Button mbaok = (Button) mbott.findViewById(R.id.sawa);
+        Button mbasubmit = (Button) mbott.findViewById(R.id.submitcode);
+
+        EditText edtUsermail2 = (EditText) mbott.findViewById(R.id.edtUseremail2);
+        EditText edtUsercode = (EditText) mbott.findViewById(R.id.edtUsercode);
+        EditText edtUserpass = (EditText) mbott.findViewById(R.id.edtUserpass);
+        EditText edtUserpassc = (EditText) mbott.findViewById(R.id.edtUserpassconfirm);
+
+        mbasubmit.setOnClickListener(new android.view.View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                if (Constantori.isConnectedToInternet()) {
+
+                    String email = edtUsermail2.getText().toString().trim();
+
+                    if (!email.isEmpty() && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+
+                        try {
+                            JSONArray json = new JSONArray();
+                            JSONObject json_ = new JSONObject();
+                            json_.put(Constantori.KEY_USEREMAIL, email);
+                            json.put(json_);
+                            new NetPost(context, "loginforgotemail_PostJSON", json, getResources().getString(R.string.signin_getcode), "", "", Loginno.this).execute(new String[]{URL_LINK});
+
+                            mbasubmit.setText("CODE SENT");
+                            mbasubmit.setEnabled(false);
+                            edtUsermail2.setEnabled(false);
+
+                        } catch (Exception e) {
+
+                        }
+
+                    } else {
+                        Snackbar.make(parent_view, Constantori.ERROR_EMAIL, Snackbar.LENGTH_LONG).show();
+                    }
+
+                }else{
+                    Constantori.dlgNoNet(View, context);
+                }
+            }
+        });
+
+
+        mbaok.setOnClickListener(new android.view.View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+                String pass = edtUserpass.getText().toString().trim();
+                String passc = edtUserpassc.getText().toString().trim();
+                String code = edtUsercode.getText().toString().trim();
+                String code_ = Constantori.getFromSharedPreference(Constantori.KEY_USERCODE);
+                String mail = edtUsermail2.getText().toString().trim();
+
+                if (Constantori.isConnectedToInternet()) {
+
+                    if(pass.equals(passc)){
+
+                        if(code.equals(code_)){
+
+                            try {
+                                JSONArray json = new JSONArray();
+                                JSONObject json_ = new JSONObject();
+                                json_.put(Constantori.KEY_USEREMAIL, mail);
+                                json_.put(Constantori.KEY_USERPASS, pass);
+                                json.put(json_);
+                                new NetPost(context, "loginforgotpassword_PostJSON", json, getResources().getString(R.string.signin_setpass), "", "", Loginno.this).execute(new String[]{URL_LINK});
+                            }catch(Exception e){
+
+                            }
+
+                            mbott.dismiss();
+
+                        }else{
+                            Snackbar.make(parent_view, Constantori.ERROR_CODE, Snackbar.LENGTH_LONG).show();    
+                        }
+
+                    }else{
+                        Snackbar.make(parent_view, Constantori.ERROR_PASSWORD_CONF, Snackbar.LENGTH_LONG).show();
+                    }
+
+                }else{
+                    Constantori.dlgNoNet(View, context);
+                }
+
+            }
+        });
+
+        mbano.setOnClickListener(new android.view.View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mbott.dismiss();
+
+            }
+        });
+
+        mbott.show();
+    }
 
 
 
