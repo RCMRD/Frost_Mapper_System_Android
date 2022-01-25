@@ -51,7 +51,7 @@
 
 
         <activity
-            android:name="com.servir.frostmapper2.Mapper"
+            android:name=".Mapper"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Main"
@@ -59,20 +59,20 @@
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.servir.frostmapper2.MainActivity" />
+                android:value=".MainActivity" />
 
         </activity>
 
 
         <activity
-            android:name="com.servir.frostmapper2.Regista"
+            android:name=".Regista"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"   />
+            android:windowSoftInputMode="adjustPan"   />
 
         <activity
-            android:name="com.servir.frostmapper2.AboutUs"
+            android:name=".AboutUs"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
@@ -80,12 +80,12 @@
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.servir.frostmapper2.MainActivity" />
+                android:value=".MainActivity" />
 
         </activity>
 
         <activity
-            android:name="com.servir.frostmapper2.ManualPg"
+            android:name=".ManualPg"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
@@ -93,13 +93,13 @@
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.servir.frostmapper2.MainActivity" />
+                android:value=".MainActivity" />
 
         </activity>
 
 
         <activity
-            android:name="com.servir.frostmapper2.Collecta"
+            android:name=".Collecta"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
@@ -107,7 +107,7 @@
 
 
         <activity
-            android:name="com.servir.frostmapper2.CollectaLoc"
+            android:name=".CollectaLoc"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
@@ -115,12 +115,12 @@
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.servir.frostmapper2.MainActivity" />
+                android:value=".MainActivity" />
 
         </activity>
 
         <activity
-            android:name="com.servir.frostmapper2.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Main"
@@ -128,17 +128,17 @@
         </activity>
 
         <activity
-            android:name="com.servir.frostmapper2.Loginno"
+            android:name=".Loginno"
             android:label="Sign In"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            android:windowSoftInputMode="adjustPan">
 
         </activity>
 
 
         <activity
-            android:name="com.servir.frostmapper2.Splascr"
+            android:name=".Splascr"
             android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"

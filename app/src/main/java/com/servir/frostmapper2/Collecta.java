@@ -166,7 +166,7 @@ public class Collecta extends AppCompatActivity {
 	    	
 	    	public void onClick(View view){
 
-				pathGeneral = Constantori.folderImages;
+				pathGeneral = Constantori.getFolderImages();
 
 				picnm = datno + photosuffix;
 
@@ -338,6 +338,18 @@ public class Collecta extends AppCompatActivity {
 			@Override
 			public void onClick(View v){
 
+				File[] tempFiles = Constantori.getFolderImages().listFiles(new FilenameFilter() {
+                    public boolean accept(File dir, String name) {
+                        return name.startsWith("temp");
+                    }
+                });
+
+                for (File file : tempFiles) {
+                    if (file.exists()){
+                        file.delete();
+                    }
+                }
+
 				Intent intent = new Intent (context, MainActivity.class);
 				startActivity(intent);
 
@@ -349,9 +361,9 @@ public class Collecta extends AppCompatActivity {
 
 	 private void saveImage(Bitmap finalBitmap) {
 
-		 Log.e(Constantori.APP_ERROR_PREFIX+"_CollectPics",pathGeneral + " : " + picnm);
+		 Log.e(Constantori.APP_ERROR_PREFIX+"_CollectPics",pathGeneral.getAbsolutePath() + " : " + picnm);
 
-		 File file = new File(pathGeneral, picnm);
+		 File file = new File(pathGeneral.getAbsolutePath(), picnm);
 
 		 if (file.exists()) {
 			 file.delete();
@@ -382,8 +394,7 @@ public class Collecta extends AppCompatActivity {
 
 		 }
 		 catch (Exception e) {
-			 Toast.makeText(context, "Camera error, take photograph again.", Toast.LENGTH_LONG ).show();
-			 e.printStackTrace();
+			 Log.e(Constantori.APP_ERROR_PREFIX+"_CollectPicsError","Error", e);
 		 }
 
 		 // Tell the media scanner about the new file so that it is
@@ -417,14 +428,6 @@ public class Collecta extends AppCompatActivity {
 
 			saveImage(bitmap);
 
-			String root2 = getExternalStorageDirectory() + "/" + Environment.DIRECTORY_DCIM + "/";
-			File myDir2 = new File(root2);
-			File file2 = new File(myDir2, "temp.jpg");
-			if (file2.exists()){
-				file2.delete();
-			}
-
-
 		}
 
 
@@ -434,8 +437,7 @@ public class Collecta extends AppCompatActivity {
 	private File createImageFile() throws IOException {
 		// Create an image file name
 
-		File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-
+		
 		File image = File.createTempFile(
 				"temp",
 				".jpg",

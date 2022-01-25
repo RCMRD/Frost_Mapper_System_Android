@@ -138,6 +138,7 @@ public class Constantori {
     public static final String PAGE_REDIRECT = "i_from";
     public static final String PAGE_REDIRECT_SIGNIN = "i_login";
     public static final String PAGE_REDIRECT_MAIN = "i_main";
+    public static final String FIRST_LOGIN = "first_login";
     public static final String INTENT_LAT = "i_lat";
     public static final String INTENT_LON = "i_lon";
     public static final String INTENT_DATNO = "i_datno";
@@ -243,18 +244,52 @@ public class Constantori {
 
     //FOLDERS/////////////////////////////////////////////////////////////////
 
-    public static final String ALL_FOLDER = "Frost_Mapper";
+    public static final String ALL_FOLDER = "FM";
     public static final String PIC_PATH = "Images";
 
-    public static File folder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM) +
-            File.separator + Constantori.ALL_FOLDER);
 
-    public static File folderImages = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM) + File.separator +  folder.getAbsolutePath() +
-            File.separator + Constantori.PIC_PATH);
+    public static File getFolder() {
+
+        File folder;
+
+        if (Build.VERSION.SDK_INT >= 30) {
+
+            folder = new File(APP_Context.getExternalFilesDir(null),Constantori.PIC_PATH); //we are in the app-specific folder
+
+        } else {
+            folder = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +
+                    File.separator + Constantori.ALL_FOLDER);
+
+        }
+
+        return folder;
+
+    }
+
+    public static File getFolderImages() {
+
+        File folderImages;
+
+        if (Build.VERSION.SDK_INT >= 30) {
+
+            folderImages = new File(APP_Context.getExternalFilesDir(null), Constantori.PIC_PATH); //we are in the app-specific folder
+
+        } else {
+
+            folderImages = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +
+                    File.separator + Constantori.ALL_FOLDER + File.separator + Constantori.PIC_PATH);
+
+        }
+
+        return folderImages;
+
+    }
 
     public static boolean createAllFolders() {
 
         boolean isCreated = false;
+        File folder = Constantori.getFolder();
+        File folderImages = Constantori.getFolderImages();
 
         if (Constantori.isExternalStorageWritable()) {
 
@@ -280,6 +315,8 @@ public class Constantori {
         return isCreated;
 
     }
+
+
 
     public static JSONObject mergeObjects(JSONObject... jsonObjects) throws JSONException {
 
