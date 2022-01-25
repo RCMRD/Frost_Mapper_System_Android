@@ -54,7 +54,7 @@
             android:name=".Mapper"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Main"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
 
             <meta-data
