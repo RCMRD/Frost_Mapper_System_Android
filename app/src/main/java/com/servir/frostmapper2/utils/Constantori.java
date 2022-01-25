@@ -11,6 +11,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Environment;
 
 import androidx.appcompat.widget.AppCompatButton;
@@ -48,6 +49,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class Constantori {
 
@@ -57,6 +59,7 @@ public class Constantori {
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "FrstDB";
     public static  final Context DATABASE_Context = ApplicationContextor.getAppContext();
+    public static  final Context APP_Context = ApplicationContextor.getAppContext();
 
     //Tables
     public static final String TABLE_LOC = "locTBL";
@@ -239,6 +242,16 @@ public class Constantori {
             }
         });
         mbott.show();
+    }
+
+    public static boolean isNumeric(String strNum) {
+
+        Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
+
+        if (strNum == null) {
+            return false;
+        }
+        return pattern.matcher(strNum).matches();
     }
 
 

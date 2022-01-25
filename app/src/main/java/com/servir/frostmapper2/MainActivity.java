@@ -978,7 +978,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         }
 
 
-        File myDir = new File(Constantori.folderImages,zipfilo);
+        File myDir = new File(Constantori.getFolderImages().getAbsolutePath(),zipfilo);
         if (!myDir.exists()) {
             myDir.getParentFile().mkdirs();
         }else{

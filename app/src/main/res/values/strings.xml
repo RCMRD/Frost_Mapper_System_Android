@@ -412,4 +412,7 @@
     <string name="general_permission_enabled">All permissions enabled.</string>
     <string name="general_permission_denied">Some permission(s) denied.</string>
 
+    <string name="parcel_loading">Loading…</string>
+    <string name="map_enable">Accept to enable map view</string>
+
 </resources>

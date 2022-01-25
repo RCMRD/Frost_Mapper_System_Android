@@ -283,7 +283,7 @@ import org.json.JSONObject;
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
         actionBar.setTitle("Map Viewer");
-        Tools.setSystemBarColor(this, R.color.colorGreenSpecial);
+        Tools.setSystemBarColor(this, R.color.colorRedSpecial);
     }
 
 

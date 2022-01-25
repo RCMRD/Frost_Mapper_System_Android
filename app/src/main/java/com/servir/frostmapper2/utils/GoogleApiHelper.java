@@ -1,4 +1,4 @@
-package com.glenwell.agradatacollector.utils;
+package com.servir.frostmapper2.utils;
 
 
 import android.app.Activity;

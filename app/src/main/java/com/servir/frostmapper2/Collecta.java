@@ -15,7 +15,7 @@ import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
+import java.io.FilenameFilter;
 import android.provider.MediaStore;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
