@@ -319,6 +319,8 @@ public class Loginno extends AppCompatActivity implements AsyncTaskCompleteListe
                     startActivity(intent);
                 } else if (!strPass.equals(dbPass) && strPhone.equals(dbPhone)) {
                     Snackbar.make(parent_view, getResources().getString(R.string.signin_password_wrong), Snackbar.LENGTH_SHORT).show();
+                    Log.e(Constantori.APP_ERROR_PREFIX + "_Login_Error_0", strPass);
+                    Log.e(Constantori.APP_ERROR_PREFIX + "_Login_Error_1", dbPass);
                 } else {
                     Snackbar.make(parent_view, getResources().getString(R.string.signin_details_wrong), Snackbar.LENGTH_SHORT).show();
                 }
@@ -964,6 +966,7 @@ public class Loginno extends AppCompatActivity implements AsyncTaskCompleteListe
                             }
 
                             Constantori.setSharedPreference(Constantori.KEY_USERPASS, pass);
+                            doDBstuff("Initial");
 
                             mbott.dismiss();
 
