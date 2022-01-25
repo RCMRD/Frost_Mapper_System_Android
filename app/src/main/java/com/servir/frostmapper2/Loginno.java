@@ -60,8 +60,6 @@ public class Loginno extends AppCompatActivity implements AsyncTaskCompleteListe
     String strPhone = "";
     String strPass="";
 
-    Boolean changedPwd, codeSent = false;
-
     String userstatus, usertoken, userid;
 
     private boolean isLocationRequestShowing = false;
@@ -964,6 +962,8 @@ public class Loginno extends AppCompatActivity implements AsyncTaskCompleteListe
                             }catch(Exception e){
 
                             }
+
+                            Constantori.setSharedPreference(Constantori.KEY_USERPASS, pass);
 
                             mbott.dismiss();
 
