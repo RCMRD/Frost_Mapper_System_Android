@@ -23,8 +23,8 @@ android {
         applicationId "com.servir.frostmapper2"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 3
-        versionName "FM_3_25012022"
+        versionCode 4
+        versionName "FM_4_25012022" //current release - missed 2 and 3 playstore editing release for long
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
