@@ -12,7 +12,7 @@
 	<item  android:id="@+id/itop2"
 		android:orderInCategory="1"
 		app:showAsAction="never"
-		android:title="Locate Me"/>
+		android:title="View Map"/>
 
 
 	<item  android:id="@+id/itop3"
